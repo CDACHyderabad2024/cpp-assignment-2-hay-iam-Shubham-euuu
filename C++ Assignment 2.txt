@@ -1,0 +1,282 @@
+ASSIGNMENT No - 2
+
+1)#include<iostream>
+using namespace std;
+
+int main()
+{
+    int iNum=0;
+    bool x=true;
+    cout<<"Enter A number : "<<endl;
+    cin>>iNum;
+
+    if(iNum==0 || iNum==1)
+    {
+        x=false;
+    }
+    else
+    {
+        for(int ctr=2; ctr<=iNum/2 ; ctr++)
+        {
+            if (iNum%ctr==0)
+            {
+                x=false;
+                break;
+            }
+        }
+    }
+
+    if(x)
+    {
+        cout<<iNum<<" is a Prime Number."<<endl;
+    }
+    else
+    {
+        cout<<iNum<<" is Not a Prime Number."<<endl;
+    }
+
+
+    return 0;
+}
+
+PS D:\cpp\Assignment_Cpp_02> g++ prime.cpp -o myexe
+PS D:\cpp\Assignment_Cpp_02> .\myexe.exe
+Enter A number : 
+9
+9 is Not a Prime Number.     
+PS D:\cpp\Assignment_Cpp_02>
+
+=============================================================================================
+
+2)#include <iostream>
+using namespace std;
+
+int prime(int num){
+    
+        for(int ctr=2; ctr<=num/2 ; ctr++)
+        {
+            if (num%ctr==0)
+            {
+                         
+                return 0;
+            }
+        }
+       cout<<num<<endl;
+        return 1;
+    }
+
+  int countprime(int strt, int end ){
+     int count = 0;
+     for(int i=strt; i <=end; i++){
+     if(prime(i)==1){
+       
+        count++;
+     }
+     
+}
+return count;
+}
+
+
+int main(){
+    int strt = 1 ; 
+    int end=0;
+
+    cout<<"Enter a Number:"<<endl;
+    cin>>end;
+    
+    
+    cout<<"Prime ranges:  "<<countprime(strt , end);
+
+    return 0;
+
+
+}
+
+PS D:\cpp\Assignment_Cpp_02> g++ prime3.cpp -o myexe
+PS D:\cpp\Assignment_Cpp_02> .\myexe.exe
+Enter a Number:
+13
+1
+2
+3
+5
+7
+11
+13
+Prime ranges:  7
+PS D:\cpp\Assignment_Cpp_02> 
+
+=======================================================================================
+
+3)
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    char ch= 'A';
+   // char ch1='C';
+
+    for(int i = 0; i<26; i++)
+    {
+        for(int j=0; j<=i ;j++)
+        {
+            cout<< char('A'+ j) << " ";
+           
+
+        }
+        cout << endl;
+       
+    }
+
+    return 0;
+}
+
+=================================================================================================
+
+4)
+#include<iostream>
+using namespace std;
+
+int Addition(int a , int b)
+{
+    return a+b;
+}
+
+int Substraction(int a , int b)
+{
+    return a-b;
+}
+
+int Multiplication(int a , int b)
+{
+    return a*b;
+}
+
+float Division(int a , int b)
+{
+    if(b==0)
+    {
+        cout<<"Denominator cant br zweo"<<endl;
+    }
+    else
+    {
+        float d=0.0;
+        d=(float)a/b;
+
+        return d;
+    }
+}
+
+int main()
+{
+    int num1,num2;
+    cout << "Enter value of num1: ";
+    cin >> num1;
+    cout << "Enter value of num2: ";
+    cin >> num2;
+
+    int iNum=0;
+    cout<< "1)  Add     2) Sub     3) Mul " << endl;
+    cout<<"4)div       5) Exit   "<<endl;
+    cin>>iNum;
+
+    int sum=0 ,sub=0,mul=0,div=0;
+
+    switch(iNum)
+    {
+        case 1:
+        sum=Addition(num1,num2);
+        cout<<"Sum : "<<sum<<endl;
+        break;
+        
+        case 2:
+        sub=Substraction(num1,num2);
+        cout<<"Substraction : "<<sub<<endl;
+        break;
+
+        case 3:
+        mul=Multiplication(num1,num2);
+        cout<<"Multiplication : "<<mul<<endl;
+        break;
+
+        case 4:
+        div=Division(num1,num2);
+        cout<<"Division : "<<div<<endl;
+        break;
+
+        case 5:
+        cout<<"Exit";
+        break;
+
+        default :
+        cout<<"Enter a Valid Number ...!"<<endl;
+        
+
+    }
+
+
+
+
+    return 0;
+}
+
+PS D:\cpp\Assignment_Cpp_02> .\myexe.exe
+Enter value of num1: 5
+Enter value of num2: 4
+1)  Add     2) Sub     3) Mul 
+4)div       5) Exit
+3
+Multiplication : 20
+PS D:\cpp\Assignment_Cpp_02>
+
+
+5)
+#include<iostream>
+using namespace std;
+int main()
+{
+ int a=0;
+ cout << "Enter the Number: ";
+ cin >> a;
+
+    for(int i = 1; i<=a; i++)
+    {
+        for(int j=1; j<=i ;j++)
+        {
+            cout<<j << " ";
+           
+
+        }
+        cout << endl;
+       
+    }
+
+    return 0;
+}
+
+
+PS D:\cpp\Assignment_Cpp_02> g++ pyNum.cpp -o myexe
+PS D:\cpp\Assignment_Cpp_02> .\myexe.exe
+Enter the Number: 10
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+1 2 3 4 5 6
+1 2 3 4 5 6 7
+1 2 3 4 5 6 7 8
+1 2 3 4 5 6 7 8 9
+1 2 3 4 5 6 7 8 9 10
+
+
+
+
+
+
+
+
+
+
